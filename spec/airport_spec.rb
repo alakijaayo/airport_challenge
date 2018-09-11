@@ -1,10 +1,9 @@
 require './lib/airport'
-require './lib/plane'
 
 describe AirportTerminal do
 
   it { is_expected.to respond_to :land }
-
+  
   it 'allows a plane to land' do
     plane = Plane.new
     expect(subject.land(plane)).to eq [plane]

@@ -1,6 +1,8 @@
+require './lib/plane'
+
 class AirportTerminal
 
-  attr_reader :plane
+  attr_reader :planes
 
   def initialize
     @planes = []
@@ -10,10 +12,8 @@ class AirportTerminal
     @planes << plane
   end
 
-  def take_off(plane)
+   def take_off(plane)
     @planes.delete(plane)
     p "Plane has left the terminal!"
   end
-
-
 end
